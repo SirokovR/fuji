@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  db:
+    image: "postgres:9.6.19"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: fujitask
+      POSTGRES_USER: fuji
+      POSTGRES_PASSWORD: fuji
+    volumes:
+      - /home/laisk/fujtask_my_postgres/data:/var/lib/postgresql/data
